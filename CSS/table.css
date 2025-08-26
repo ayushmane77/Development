@@ -1,0 +1,31 @@
+body{
+    margin:50px;
+}
+table{
+    border: 2px solid;
+    border-collapse: collapse;
+}
+tbody td , thead td{
+    border: 2px solid;
+    padding: 20px;
+}
+thead td{
+    font-size: 40px;
+    font-weight: bolder;    
+}
+tr td{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tableHead{
+    background-color: green;
+}
+.tableBody{
+    background-color: #DDDAD0;
+}
+.images{
+    height: 100px;
+    width: 100px;
+    
+}

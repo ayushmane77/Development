@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of multiple objects</title>
+    <script>
+        var car = [{
+            id:101,
+            name:"BMW",
+            price:3400000,
+            type: "fast"
+        },{
+            id:102,
+            name:"Audi",
+            price:6300000
+        }];
+        for(i=0;i<car.length;i++){
+            document.write(car[i]["id"] + document.write(car[i]["type"]) + "<br>")
+            document.write()
+            document.write(car[i]["name"] + "<br>")
+            document.write(car[i]["price"] + "<br>")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

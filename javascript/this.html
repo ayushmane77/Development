@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+    <script>
+        var staff = {
+            id:101,
+            name:"Geeta",
+            details:function(){
+                document.write(staff["name"] + "<br>")
+                document.write(this.name + "<br>");
+            }
+        };
+        staff["id"] = 102; // update the key
+        delete staff["id"]; // delete the key
+        document.write(staff["id"] + "<br>");
+        staff.details();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If demo</title>
+    <script>
+        // var num = prompt("enter a number")
+        // var count = 1;
+        // if(parseInt(num)<=9999){
+        //     document.write("successfull");
+        // }
+        // else{
+        //     document.write("unsuccessfull");
+        // }
+
+        // var no = prompt("enter a number")
+        // if(parseInt(no)%7==0 || parseInt(no)%2==0){
+        //     document.write("divisible")
+        // }
+        // else{
+        //     document.write("not");
+        // }
+
+        // 60% above or not qualify
+        // 2 yr exp
+
+        // var per = prompt("enter a number")
+
+        // if(parseInt(per)>60){
+        //     var exp = prompt("enter exp")
+        //     if(exp>2){
+        //         document.write("exp");
+        //     }
+        //     else{
+        //         document.write("unexp")
+        //     }
+        // }
+        // else{
+        //     document.write("unexp")
+        // }
+
+        var year = prompt("enter the year");
+        if (year % 400 == 0) {
+            document.write("it is leap year");
+        }
+        else {
+            if (year % 4 == 0) {
+                if (year % 100 != 0) {
+                    document.write("it is a leap year");
+                }
+                else {
+                    document.write("it is a not a  leap year");
+                }
+            }
+            else {
+                document.write("it is not a leap year")
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

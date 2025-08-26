@@ -1,0 +1,19 @@
+div.pet{
+    color:blue;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aquamarine;
+    width: 400px;
+    height: 400px;
+    text-decoration: underline;
+}
+ul{
+    font-family: Arial, Helvetica, sans-serif;
+    color: blueviolet;
+
+}
+p.msg{
+    color: green;
+    font-size: larger;
+    text-decoration: dashed;
+}

@@ -1,0 +1,24 @@
+.responsive-video {
+            width: 100%;
+            /* takes full width of container */
+            max-width: 1000px;
+            /* optional: restrict max size */
+            height: auto;
+            /* keeps aspect ratio */
+            display: block;
+            margin: 0 auto;
+            /* centers horizontally */
+            border-radius: 10px;
+            /* optional: rounded corners */
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+.responsive-video :hover{
+    transform: scale(1.05);       /* zooms slightly */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* adds shadow */
+    background-color: black;
+}        
+.card-img-top {
+  height: 250px;          /* set fixed height for all images */
+  object-fit: cover;      /* crop images to fill space */
+  width: 100%;            /* take full card width */
+}

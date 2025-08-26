@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object with function</title>
+    <script>
+        var obj = {
+            carNo : 101,
+            carName : "Audi",
+            price:30000000,
+            speed: function(){
+                document.write("speed is 80 per/km" + "<br>");
+            },
+        };
+        document.write(obj["carName"]+ "<br>")
+        document.write(obj.speed());
+        // or
+        obj.speed();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

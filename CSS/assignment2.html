@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        form{
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-top: 200px;
+            margin-bottom: 200px;
+            background-color: #F1E7BA;
+            height: 230px;
+            padding: 30px;
+        }
+        label{
+            display: block;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            /* margin-bottom: 5px; */
+            border-radius: 5px;
+        }
+        input{
+            width: 100%;
+            background-color: white;
+            border: none;
+            margin-bottom: 20px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        input.submit{
+            background-color: #E84420;
+            color: white;
+            border-radius: 30px;
+            padding: 15px;
+            cursor: pointer;
+            font-size: larger;
+        }
+        </style>
+</head>
+<body>
+    <form action="">
+        <label for="Username">Enter Username</label>
+        <br>
+        <input type="email" id="Username"  placeholder="Enter email Id " required>
+        <br>
+        <label for="Password">Enter Password</label>
+        <br>
+        <input type="password" id="Password" placeholder="Password here" required>
+        <br>
+        <input type="submit" class="submit" value="Login">
+    </form>
+</body>
+</html>

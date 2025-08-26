@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var per = parseInt(prompt("enter the percentage"));
+        if(per>100 || per<0){
+            document.write("invalid number")
+        }
+        else{
+            if(per>=90){
+                document.write("A" + "<br/>")
+            }
+            else if(per>=80){
+                document.write("B" + "<br/>")
+            }
+            else if(per>=60){
+                document.write("C" + "<br/>")
+            }
+            else if(per>=35){
+                document.write("D" + "<br/>")
+            }
+            else{
+                document.write("fail" + "<br/>")
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

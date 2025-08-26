@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute selector</title>
+    <style>
+        /* [class|="design"]{  dash is required after prefix
+            color: red;
+            font-size:larger;
+        } */
+        /* [class^="design"]{ no limitation anything can be added after prefix
+            color: red;
+            font-size: larger;
+        } */
+        /* [class $="design"]{
+            color:red;
+            font-size: larger;
+        } */
+        [class*="design"]{
+            color: red;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <p class="design">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium qui sunt et saepe ratione sit, debitis neque excepturi culpa aut eveniet est possimus asperiores. Reiciendis placeat voluptate quibusdam sequi dolor.</p>
+    <!-- providing dash(hyphen -) is compulsory for applying styles  -->
+    <p class="design-vnaos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium qui sunt et saepe ratione sit, debitis neque excepturi culpa aut eveniet est possimus asperiores. Reiciendis placeat voluptate quibusdam sequi dolor.</p> 
+    <p class="foahsofdesign">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium qui sunt et saepe ratione sit, debitis neque excepturi culpa aut eveniet est possimus asperiores. Reiciendis placeat voluptate quibusdam sequi dolor.</p>
+    <p class="sfjsldesignlwvp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus amet molestias saepe illum animi distinctio totam repudiandae? Minus quis dolor voluptatum itaque tempore reiciendis explicabo magnam ad, nostrum dolore adipisci?</p>
+</body>
+</html>

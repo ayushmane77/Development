@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator selector</title>
+    <style>
+        div p{
+            color: violet;
+            font-size: 1cm;
+            font-family: cursive;
+        }
+        h1~p{
+            color: greenyellow
+        }
+        h2 + p{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>paragraph inside the div</p>
+        <p>paragraoh inside the div</p>
+        <p>paragraph inside the div</p>
+    </div>
+    <p>paragraph outside the div</p>
+
+    <h1>
+        <p>paragraph inside the h1 tag</p>
+        <p>paragraph inside the h1 tag</p>
+    </h1>
+    <p>paragraph outside the h1 tag</p>
+
+    <h2>
+        <p>paragraph inside the h2 tag</p>
+        <p>paragraph inside the h2 tag</p>
+        <p>paragraph inside the h2 tag</p>
+    </h2>
+    <p>paragraph outside the h2 tag</p>
+    <p>paragraoh outside the h2 tag</p>
+</body>
+</html>

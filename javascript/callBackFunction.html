@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback function</title>
+    <script>
+        function mydisplay(sum){
+            document.write("display function and sum " + sum + "<br>")
+        }
+        function firstFunction(num1,num2,mydisplay){
+            document.write("first function <br>");
+            let sum = num1 + num2;
+            mydisplay(sum);
+        }
+        firstFunction(5,3,mydisplay);
+
+
+        function second(){
+            document.write("second function <br>");
+        }
+        function first(){
+            document.write("first function <br>")
+            second()
+        }
+        first(second);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

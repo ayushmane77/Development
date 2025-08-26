@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentProfile</title>
+    
+</head>
+<body>
+    <form action="">
+    <h2 style="font-weight: bolder;">Create Profile</h2>
+    <label for="fist name">First Name:</label>
+    <input type="text" id="first name" placeholder="First Name" required>
+    <br>
+    <label for="last name">Last Name:</label>
+    <input type="text" id="last name" placeholder="Last Name" required>
+    <br>
+    <label for="date of birth">Date of Birth:</label>
+    <input type="date" id="date of birth" required>
+    <br>
+    <label for="age">Enter age</label>
+    <input type="number" id="age" placeholder="Age" required> <b style="color: red;">Age must be a Number</b>
+    <br>
+    <label for="gender">Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" checked> 
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label> <b style="color: red;">Default Gender selection must be male</b>
+    <br>
+    <label for="current address" style="text-align: center;">Current Address:</label>
+    <textarea name="current address" id="current address" cols="30" rows="8" required></textarea>
+    <br>
+    <label for="permanent address">Permanent Address:</label>
+    <textarea name="permanent address" id="permanent address" cols="30" rows="8" required></textarea>
+    <br>
+    <input type="submit" value="Create">
+    </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+    <script>
+        var msg = () =>{
+            return "Hello  <br>";
+        }
+        document.write(msg())
+
+        // var area = (radius)=>{
+        //     return 3.14 * radius * radius;
+        // }
+
+        // var radius = parseInt(prompt("enter radius"));
+        // document.write(area(radius));
+
+
+        // var area2 = (length,breadth)=>{
+        //     return length*breadth;
+        // }
+
+        // var len = parseInt(prompt("enter length"));
+        // var breadth = parseInt(prompt("enter breadth"));
+
+        // document.write(area2(len,breadth));
+
+        function mydisplay(sum){
+            document.write("display function and sum is " + sum + "<br>");
+        }
+        function secondFunction(num1,num2){
+            document.write("second function <br>");
+            let sum = num1 + num2
+            mydisplay(sum);
+        }
+        secondFunction(3,4);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

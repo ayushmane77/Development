@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <script>
+        // var day = parseInt(prompt("enter the no of day"));
+        // switch(day){
+        //     case 1: alert("monday");
+        //             break;
+        //     case 2: alert("tuesday");
+        //             break;
+        //     case 3: alert("wednesday");
+        //             break;
+        //     case 4: alert("thursday");
+        //             break;
+        //     case 5: alert("friday");
+        //             break;
+        //     case 6: alert("saturday");
+        //             break;
+        //     case 7: alert("sunday");
+        //             break;           
+        //     default:
+        //             alert("invalid");       
+        // }
+
+        // var elem = prompt("enter the string");
+        // switch(elem){
+        //     case "one": alert("monday");
+        //                 break;
+        //     case "two": alert("tuesday");
+        //                 break;
+        //     case "three": alert("wednesday");
+        //                 break;
+        //     case "four": alert("thursday");
+        //                 break;
+        //     case "five": alert("friday");
+        //                 break;
+        //     case "six": alert("sat");
+        //                 break;
+        //     case "seven": alert("sun");
+        //                 break;   
+        //     default : alert("invalid string");
+
+        // }
+
+        var year = parseInt(prompt("enter the year"))
+        var month = parseInt(prompt("enter the month"));
+        switch(month){
+            case 1:alert("jan: 31 days ");
+                   break;
+            case 2:if(year%400==0){
+                        alert("feb: 29 days ");
+                    }
+                    else if(year%4==0 && year%100!=0){
+                        alert("feb: 29 days")
+                    }
+                    else{
+                        alert("feb : 28 days")
+                    }
+                   break;
+            case 3:alert("mar: 31 days ");
+                   break;
+            case 4:alert("april: 30 days ");
+                   break;
+            case 5:alert("may: 31 days ");
+                   break;
+            case 6:alert("jun: 30 days ");
+                   break;
+            case 7:alert("july: 31 days ");
+                   break;
+            case 8:alert("aug: 31 days ");
+                   break;
+            case 9:alert("sept: 30 days ");
+                   break;
+            case 10:alert("oct: 31 days ");
+                   break;
+            case 11:alert("nov: 30 days ");
+                   break;
+            case 12:alert("dec: 31 days ");
+                   break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

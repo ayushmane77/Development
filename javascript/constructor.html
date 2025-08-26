@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor use</title>
+    <script>
+        function person(fist,last,age,salary){
+            this.firstName = fist,
+            this.lastName = last,
+            this.age = age,
+            this.salary = salary;
+        }
+        p = new person("Rahul","Sharma",23,200000);
+        document.write(p.firstName + "<br>");
+        document.write(p.lastName + "<br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

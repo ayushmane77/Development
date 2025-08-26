@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    <table border="1">
+        <caption>employee</caption>
+        <thead>
+            <th>emp no</th>
+            <th>emp name</th>
+            <th>emp salary</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>ayush</td>
+            <td>90000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>tushar</td>
+            <td>90000</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+            <td>3</td>
+            <td>pramod</td>
+            <td>90000</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- Difference between cellspacing and cellpading-->
+    <table border="1"cellPadding="20" cellspacing="10"> <!-- cellspacing define the space between border of adjacent cells-->
+        <caption>food</caption> <!-- cellpadding define the space between border of cell and content-->
+        <thead>
+            <th>foodId</th>
+            <th>foodName</th>
+            <th>foodtype</th>
+            <th>food category</th>
+            <th>food price</th>
+            <th>image</th>
+            <th colspan="2">Payment mode</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>burger</td>
+                <td>fastfood</td>
+                <td>light</td>
+                <td>78</td>
+                <td><img src="download (1).jpg" height="100" width="100" alt=""></td>
+                <td>cash</td>
+                <td>UPI</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>pizza</td>
+                <td>fastfood</td>
+                <td>heavy</td>
+                <td>300</td>
+                <td><img src="download.jpg"  height="100" width="100"></td>
+                <td>net banking</td>
+                <td>cash</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>sandwich</td>
+                <td>fastfood</td>
+                <td>light</td>
+                <td>99</td>
+                <td><img src="flower1.jpg" alt="" height="100" width="100"></td>
+                <td>digital wallet</td>
+                <td>UPi</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>burger</td>
+                <td>fastfood</td>
+                <td>light</td>
+                <td>78</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>5</td>
+            <td>vada pav</td>
+            <td>fastfood</td>
+            <td>light</td>
+            <td>15</td>
+        </tfoot>
+
+        
+    </table>
+</body>
+</html>

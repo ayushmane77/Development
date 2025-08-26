@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Object</title>
+    <script>
+        var emp = {
+            id:103,
+            name:"Ayush",
+            age:19,
+            salary:100000,
+            courses:["core java","adv java","python",".net"]
+        };
+        document.write(emp["id"]);
+        document.write(emp["name"]);
+        for(i=0;i<emp["courses"].length;i++){
+            document.write(emp["courses"][i] + "<br>");
+        }
+        // for(j=0;j<emp.;j++){
+        //     document.write(emp[j] + "<br>");
+        // }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
