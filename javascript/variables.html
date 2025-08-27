@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables demo</title>
+    <script>
+        //1. how is variable declared in javascript?
+
+        // A variable in javascript can be stored in three ways: var, let, const
+        var name = "Ayush";
+        // let name = "ayush"; // will not work because 'name' variable is already declared and assigned.
+        // const name = "Aayush"; // wiil also not work.
+        document.write(name + "<br>");
+
+        let name2 = "ayush"; // anything can be stored in variable(in all var,let,const) like 
+        // integer, strings, objects , functions, boolean values, arrays etc.
+        document.write(name2 + "<br>");
+
+        let num = 7;
+        document.write(num + "<br>");
+
+        Boolean = true;
+        document.write(Boolean + "<br>")
+
+        const pie = 3.14;
+        document.writeln(pie + "<br>");
+
+        var obj = {// variables are also  assigned to objects or even nested objects
+            // or array of objects
+            firstName : "Ayush",
+            lastName : "Mane",
+            age : 22
+        }
+        console.table(obj["firstName"],obj["lastName"],obj["age"]);
+
+        // 2. what are the different naming convention for declaring a variable name?
+        let email = "saket12@gmail.com";
+        var Email = "example23@gmail.com";
+        const _email = "tushar56@gmail.com";
+        let $email = "promod90@gmail.com";
+
+        // A variable name should start with aplhabets(lowerCase or UpperCase), underscore(_)
+        // or with a dollar($).
+        // It cannot start with numbers,or with other non-aplhabetic characters
+
+        // let &password = "dof@g0!"; will result a compilation error
+
+        // A number can be inserted after first character of variable like
+        var password7 = "gss@4#";
+        let p7ass = 302;
+        
+
+        var hero,named = "homelander"; // 'hero' is one variable which is declared but not initialized
+        // whereras second variable 'named' is declared and also initialized.
+        document.write(hero + "<br>");
+        document.write(named + "<br>");
+
+        // rest all other characters cannot even start with a variable name, or be added in
+        // between the variable name, and also not in end of variable name.
+        // eg: (!,@,#,%,^,&,*)
+
+        
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
