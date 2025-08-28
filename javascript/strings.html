@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name = "AYush";
+        
+        document.write(name.charAt(0) + "<br>");
+        document.write(name.indexOf('u') + "<br>");
+        document.write(name.length + "<br>");
+        document.write(name.toUpperCase() + "<br>");
+        
+        // let email = prompt("enter the email");
+        // var index = 0
+        // for(i=0;i<email.length;i++){
+        //     if(email.charAt(i)==='@'){
+        //         index = i+1;
+        //         break;
+        //     }
+        // }
+        
+        // let newmail = "";
+        // for(j=index;j<email.length;j++){
+        //     newmail = newmail.concat(email.charAt(j)); 
+        // }
+        // document.write(newmail + "<br>");
+        var msg = "afgaagh";
+        var count = 0;
+        for(i=0;i<msg.length;i++){
+            if(msg.charAt(i)==='a'){
+                count++;
+            }
+        }
+        document.write(count + "<br>");
+
+        var text = "hello World World world thank";
+        var newTxt = text.replace("World","Ayush");
+        document.write(newTxt + "<br>");
+
+        var newtxt = text.replaceAll("World","Ayush");
+        document.write(newtxt + "<br>");
+
+        var enc = "aaadddaaafgaa";
+        // document.write(enc.replaceAll("a","h"));
+        var count2 = enc.length - enc.replaceAll('a','').length;
+        document.write(count2 + "<br>");
+
+        var dec = "Hello world";
+        document.write(dec.startsWith("Hello") + "<br>");
+        document.write(dec.endsWith("world") + "<br>");
+
+        let num = "5";
+        let num1 = 5;
+        document.write(num==num1 + "<br>");
+
+        document.write(num===num1 + "<br>");
+
+        var str = prompt("enter string");
+        var count3 = 0;
+        for(i=0;i<str.length;i++){
+            if(str.charAt(i)==='a' || str.charAt(i)==='e' || str.charAt(i)==='i' || str.charAt(i)==='o' || str.charAt(i)==='u' || str.charAt(i)==='A' || str.charAt(i)==='E' || str.charAt(i)==='I' || str.charAt(i)==='O' || str.charAt(i)==='U'){
+                count3++;
+            }
+        }
+        document.write( "<br>" + count3 + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
