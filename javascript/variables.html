@@ -35,6 +35,11 @@
         }
         console.table(obj["firstName"],obj["lastName"],obj["age"]);
 
+        // A variable can also be declared without (let,var,const), but it is a bad practice.
+
+        mobileNo = "+91 90XXXXXXX";
+        document.write(mobileNo + "<br>");
+
         // 2. what are the different naming convention for declaring a variable name?
         let email = "saket12@gmail.com";
         var Email = "example23@gmail.com";
@@ -61,7 +66,32 @@
         // between the variable name, and also not in end of variable name.
         // eg: (!,@,#,%,^,&,*)
 
-        
+        // 3. what is the difference between var, let and const?
+        // var: can be accesible outside the lexical scope
+        // It can be re-declared and re-initialized
+        // It is not recommended to use var in modern javascript because of block and 
+        // functional level scope.
+        // If the variable is declared after accessing the variable, the compiler defines at 'undefined'
+
+        // let: cannot be accessed outside its lexical scope.
+        // It cannot be re-declared inside the same block level or function.
+        // It can be re-initialized (re-assigned diffrent value).
+        // It is recommended to use let in modern js to avoid unexperienced behaviour.
+
+        // const: cannot be accessed outside the lexical scope.
+        // It cannot be re-declared inside the same block level or function.
+        // It cannot be re-initialized.
+        // It is recommended to use const to make final value which cannot be changed.
+
+        // eg:
+        if(true){
+            var a = 10;
+            let b = 20;
+            const c = 30;
+        }
+        document.write(a + "<br>");
+        document.write(b + "<br>");
+        document.write(c + "<br>");
 
 
     </script>
