@@ -93,7 +93,10 @@
         document.write(b + "<br>");
         document.write(c + "<br>");
 
-
+        function fun(){
+            num = 10; // it is a variable which is not defined with var,let or const
+        }
+        document.write(num); // still it is accessible outside function scope, unlike var,let and const.
     </script>
 </head>
 
