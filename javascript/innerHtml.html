@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+            document.getElementById("para").innerHTML = new Date();
+        }
+        function hide(){
+            document.getElementById("para").innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+    <p id="para"></p>
+    <input type="button" value="show" onclick="display()">
+    <input type="button" value="hide" onclick="hide()">
+</body>
+</html>
