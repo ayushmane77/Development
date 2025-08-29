@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM function</title>
+</head>
+<body>
+    <p id="para">This is a paragraph.</p>
+    <p id="para2">this is another paragraph</p>
+    <h1 id="head">this is a header</h1>
+    <script>
+        let msg = document.getElementById("para").textContent;
+        let msg2 = document.getElementById("para2").textContent;
+        let h = document.getElementById("head").textContent;
+        // textContent fetches the content which is already present in html element
+        // whereas .innerHTML is used to store new data mostly in empty html tags.
+        alert(msg);
+        alert(msg2);
+        alert(h);
+    </script>
+</body>
+</html>
