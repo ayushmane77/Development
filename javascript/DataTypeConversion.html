@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data type conversion</title>
+    <script>
+
+        // Converting a string to number datatype : string -> number
+
+        let num1 = "34";
+        document.write(typeof(num1) + "<br>"); // prints string
+        let modiNum1 = Number(num1); // Number is also an interface
+        document.write(typeof(modiNum1) + "<br>"); // prints number
+
+        let num2 = "dgb235"; // not a proper string which contains number characters.
+        document.write(typeof(num2) + "<br>"); 
+        let modiNum2 = Number(num2);
+        document.write(typeof(modiNum2) + "<br>") // prints number as its datatype
+        // but when we try to print the actual no, then
+        document.write(modiNum2 + "<br>"); // prints NaN
+        // this is the exceptions , which clearly has mistakes.
+
+        // converting a boolean datatype to number datatype
+        let isLoggedIn = true;
+        document.write(typeof(isLoggedIn) + "<br>");
+        let ModifiedNum = Number(isLoggedIn);
+        document.write(ModifiedNum + "<br>"); // js considers true as 1, so prints 1
+        document.write(typeof(ModifiedNum) + "<br>"); // prints number as its datatype.
+
+        let isSignedIn = false;
+        let modifiedNum2 = Number(isSignedIn);
+        document.write(modifiedNum2 + "<br>"); // js consider false as 0, so prints 0
+        document.write(typeof(modifiedNum2) + "<br>"); // prints number
+
+        // converting number datatype to boolean datatype
+        let c = 1;
+        let isEmployee = Boolean(c);
+        document.write(isEmployee + "<br>"); // prints true as 1 is treated as true
+        document.write(typeof(isEmployee) + "<br>");
+
+        let d= 0;
+        let isCurropted = Boolean(d);
+        document.write(isCurropted + "<br>"); // prints false as 0 is treated as false
+        document.write(typeof(isCurropted) + "<br>");
+
+        let name = "Ayush";
+        let modiName = Boolean(name);
+        document.write(modiName + "<br>"); // prints true as it considers every string 
+        // value as true apart from number of 0
+        document.write(typeof(modiName) + "<br>");
+
+        let str = "0"; 
+        let modiStr = Boolean(str);
+        document.write(modiStr + "<br>"); // prints true 
+        document.write(typeof(modiStr) + "<br>");
+
+        // converting number to string datatype.
+        let num = 72;
+        document.write(num + "<br>");
+        document.write(typeof(num) + "<br>"); // prints number as its datatype
+        
+        let toString = String(num); // converting the number datatype to the String datatype
+        // using the String(interface)
+        document.write(toString + "<br>");
+        document.write(typeof(toString) + "<br>"); // prints String
+
+        // converting a boolean to a string
+        let a = true;
+        document.write(typeof(a) + "<br>"); // prints boolean
+        let b = String(a);
+        document.write(typeof(b) + "<br>"); // prints String as its datatype
+
+        // converting a null to a string
+        let obj = null;
+        document.write(typeof(obj) + "<br>"); // prints object as its datatype
+        let modifiedObj = String(obj);
+        document.write(typeof(modifiedObj) + "<br>"); // prints String as its datatype
+
+        // converting an undefined to a string
+        let un;
+        document.write(typeof(un) + "<br>"); // prints undefined
+        let un2 = String(un);
+        document.write(typeof(un2) + "<br>"); // prints String
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
