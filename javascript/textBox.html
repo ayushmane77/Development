@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text box</title>
+    <script>
+        function message(){
+            let m = document.getElementById("fname").value;
+            alert(m);
+        }
+        function message2(){
+            let m2 = document.getElementById("lname").value;
+            alert(m2);
+        }
+        function addition(){
+            let num1 = parseInt(document.getElementById("no1").value); 
+            let num2 = parseInt(document.getElementById("no2").value); 
+            let sum = num1 + num2;
+            alert(sum);
+        }
+    </script>
+</head>
+<body>
+    FirstName : <input type="text" id="fname"> <br>
+    <input type="button" value="click me" onclick="message()"> <br>
+    LastName : <input type="text" id="lname"> <br>
+    <input type="submit" value="click" onclick="message2()"> <br>
+
+    FirstNumber : <input type="text" id="no1"> <br>
+    SecondNumber : <input type="text" id="no2"> <br>
+    <input type="submit" value="add" onclick="addition()"> <br>
+</body>
+</html>
