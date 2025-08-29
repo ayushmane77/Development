@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse and keyboard events</title>
+    <script>
+        function show(){
+            let elem = document.getElementById("msg").value;
+            document.getElementById("para").innerHTML = elem.toUpperCase();
+        }
+        function show2(){
+            let elem = document.getElementById("msg2").value;
+            document.getElementById("para2").innerHTML = elem.toUpperCase();
+        }
+        function display(){
+            document.getElementById("mouse").style.fontSize = "2cm";
+            document.getElementById("mouse").style.color = "red";
+        }
+        function leave(){
+            document.getElementById("mouse").style.fontSize = "";
+            document.getElementById("mouse").style.color = "black";
+        }
+    </script>
+</head>
+<body>
+    Enter the name : <input type="text" id="msg" onkeyup="show()"> <br>
+    <p id="para"></p>
+
+    Enter the name : <input type="text" id="msg2" onkeydown="show2()"> <br>
+    <p id="para2"></p>
+
+    onmouseover
+    onmouseleave
+
+    <h1 id="mouse" onmouseover="display()" onmouseleave="leave()">Mouse over</h1>
+
+</body>
+</html>
