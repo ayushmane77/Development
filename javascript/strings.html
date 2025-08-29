@@ -12,20 +12,20 @@
         document.write(name.length + "<br>");
         document.write(name.toUpperCase() + "<br>");
         
-        // let email = prompt("enter the email");
-        // var index = 0
-        // for(i=0;i<email.length;i++){
-        //     if(email.charAt(i)==='@'){
-        //         index = i+1;
-        //         break;
-        //     }
-        // }
+        let email = prompt("enter the email");
+        var index = 0
+        for(i=0;i<email.length;i++){
+            if(email.charAt(i)==='@'){
+                index = i+1;
+                break;
+            }
+        }
         
-        // let newmail = "";
-        // for(j=index;j<email.length;j++){
-        //     newmail = newmail.concat(email.charAt(j)); 
-        // }
-        // document.write(newmail + "<br>");
+        let newmail = "";
+        for(j=index;j<email.length;j++){
+            newmail = newmail.concat(email.charAt(j)); 
+        }
+        document.write(newmail + "<br>");
         var msg = "afgaagh";
         var count = 0;
         for(i=0;i<msg.length;i++){
