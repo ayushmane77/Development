@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <script>
+
+        // the datatypes common js are
+        // 1. number -> 2^53
+        // 2. bigint
+        // 2. string - ""
+        // 3. boolean -> true/false
+        // 4. null -> standalone value
+        // 5. undefined 
+        // 6. object
+        // 7. symbol -> unique
+        let a = 10;
+        document.write(typeof(a) + "<br>"); // a number
+
+        // number greater than 2^54 - 1 can be stored in BigInt(which is an interface)
+        let num = BigInt(325251651353153215225242424242424242425);
+        document.write(num  + "<br>");
+        document.write(typeof(num) + "<br>");
+
+        let b = "Ayush";
+        document.write(typeof(b) + "<br>"); // a string
+
+        let c = 3.14;
+        document.write(typeof(c) + "<br>"); // still a number
+
+        let d = true;
+        document.write(typeof d + "<br>"); // it is boolean
+
+        let e;
+        document.write(e + "<br>"); // prints undefined
+        document.write(typeof(e) + "<br>") // also prints undefined
+
+        let f = null;
+        document.write(f + "<br>"); // prints null
+        document.write(typeof(f) + "<br>"); // prints object
+        // So by default, javascript considers the data type of null as object.
+
+
+    </script> 
+</head>
+<body>
+    
+</body>
+</html>
