@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings practice</title>
+    <script>
+        // practice question based on strings
+
+        // Basic Replacement
+        // 1.Replace all "dog" with "cat" in the string:
+        // "I have a dog. My dog is cute. Dogs are friendly."
+
+        let txt = "I have a dog. My dog is cute. Dogs are friendly."
+        let newtxt = txt.replaceAll(/dog/gi,"cat");
+        console.log(newtxt);
+        
+        //Remove Characters
+        // Remove all spaces from the string:
+        // "H e l l o W o r l d"
+
+        let msg = "H e L l o W O r l d";
+        let newMsg = msg.replaceAll(" ","");
+        console.log(newMsg);
+        
+        // Mask Sensitive Data
+        // Convert a phone number like "9876543210" into "********10" (mask all but last 2 digits).
+
+        let no = "98219182393";
+        let newNo = no.replaceAll(/[0-9]/g,"*");
+        console.log(newNo);
+
+        // Replace all spaces in a sentence with underscores.
+        let sentence = " Hello  there  I am Programmer  ";
+        console.log(sentence.replaceAll(" ","_"));
+        
+        // Use a function as the replacement in replaceAll to wrap every found word "cat" in brackets: "[cat]".
+        let m = "Cats are pet animals. cats live around 20 years. My Cat name is tracy"
+        let newM = m.replaceAll(/Cat/gi,"[Cats]");
+        console.log(newM);
+
+        // replace all vowels from the string .
+        let message = "agenuxOjOEqIziUdFu";
+        let newMessage = message.replaceAll(/[aeiouAEIOU]/g , "");
+        console.log(newMessage);
+
+        // remove all non-alphanumeric characters from the string
+        let p = "akv3k6!O*r#k@AL(e%kGjeL"
+        let newP = p.replaceAll(/[^a-z0-9]/gi,"");
+        console.log(newP);
+        
+        // Now another important method named .split()
+        // convert a para containing muliple sentences separated by . into array
+
+        let paragraph = "Hello there. I am a programmer. I learn new things. I debug code";
+        let newSentence = paragraph.split(".");
+        for(let i=0;i<newSentence.length;i++){
+            console.log(newSentence[i]);
+        }
+        console.log(newSentence);
+        
+        // convert a string to an aphabets(char) of array
+        let str = "Ayush Tushar";
+        let arr = str.split("");
+        for(let i=0;i<arr.length;i++){
+            console.log(arr[i]);
+        }
+        console.log(arr);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
