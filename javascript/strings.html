@@ -11,6 +11,19 @@
         document.write(name.indexOf('u') + "<br>");
         document.write(name.length + "<br>");
         document.write(name.toUpperCase() + "<br>");
+
+        // difference between .substring() and slice() method
+        let newName = "Ayush Mane";
+        document.write(`${newName.substring(0,7)} <br>`); // starts from 0(inclusive)
+        // but 7 is exclusive
+        document.write(newName.substring(-3) + "<br>"); // negative not allowed
+        // it will be converted to 0 by javascript.
+        document.write(newName.substring(4) + "<br>"); // if the end is not specified , then
+        // it will move to the end of the string
+
+        document.write(`${newName.slice(0,7)} <br>`);
+        document.write(`${newName.slice(-4,-1)} <br>`); // negative allowed in slice method
+        // therfore last index has value of -1.
         
         let email = prompt("enter the email");
         var index = 0
@@ -43,7 +56,9 @@
         document.write(newtxt + "<br>");
 
         var enc = "aaadddaaafgaa";
-        // document.write(enc.replaceAll("a","h"));
+        document.write(enc.replaceAll("a","h") + "<br>");
+        let de = enc.replaceAll(/[^a]/g,'');
+        document.write(`the count of a is ${de.length} <br>`);
         var count2 = enc.length - enc.replaceAll('a','').length;
         document.write(count2 + "<br>");
 
@@ -64,7 +79,22 @@
                 count3++;
             }
         }
-        document.write( "<br>" + count3 + "<br>");
+        document.write( count3 + "<br>");
+
+        let tex = "hello there";
+        let arr = tex.split(" "); // converts into an array based on splitting character
+        // document.write(arr);
+
+        for(let i=0;i<arr.length;i++){
+            document.write(arr[i] + "<br>");
+        }
+
+        let rep = tex.repeat(3);
+        document.write(rep + "<br>");
+
+        let fname = "   ayush   ";
+        document.write(fname.trim() + "<br>"); // removes all whitespaces from starting and ending
+
     </script>
 </head>
 <body>
