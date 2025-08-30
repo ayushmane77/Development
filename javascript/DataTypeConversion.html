@@ -39,6 +39,11 @@
         document.write(isEmployee + "<br>"); // prints true as 1 is treated as true
         document.write(typeof(isEmployee) + "<br>");
 
+        let z = 32;
+        let newZ = z.toString(z); // toString() method can also be used to convert any data type to string.
+        console.log(newZ);
+        
+
         let d= 0;
         let isCurropted = Boolean(d);
         document.write(isCurropted + "<br>"); // prints false as 0 is treated as false
@@ -70,19 +75,21 @@
         document.write(typeof(a) + "<br>"); // prints boolean
         let b = String(a);
         document.write(typeof(b) + "<br>"); // prints String as its datatype
+        document.write(`the value of ${a} boolean is converted to ${b} which is string <br>`)
 
         // converting a null to a string
         let obj = null;
         document.write(typeof(obj) + "<br>"); // prints object as its datatype
         let modifiedObj = String(obj);
         document.write(typeof(modifiedObj) + "<br>"); // prints String as its datatype
+        document.write(`the value of ${obj} which is null is converted to string of  ${modifiedObj} <br>`);
 
         // converting an undefined to a string
         let un;
         document.write(typeof(un) + "<br>"); // prints undefined
         let un2 = String(un);
         document.write(typeof(un2) + "<br>"); // prints String
-
+        document.write(`the value of ${un} which is undefined is converted to ${un2} which is string <br>`);
         
     </script>
 </head>
