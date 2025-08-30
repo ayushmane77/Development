@@ -9,11 +9,27 @@
         let b = 3;
         let sum = a + b;
         document.write("<h2>" + sum);
-        document.write("<h2>" + 3-2);
-        document.write("<h2>" + 4*5);
-        document.write("<h2>" + 2**3);
-        document.write("<h2>" + 8/2);
-        document.write("<h2>" + 42%2);
+        document.write("<h2>" + 3-2); // will give NaN because '+' has higher precedence
+        // than the '-' operator 
+        document.write("<h2>" + 4*5); // 20
+        document.write("<h2>" + 2**3); // 8
+        document.write("<h2>" + 8/2); // 4
+        document.write("<h2>" + 42%2); // 0
+
+        console.log(1+"2"); // 12
+        console.log("1" + 2); // 12
+        console.log(1+2); // 3
+        console.log("1" + 2 + 2); // 122
+        console.log(1 + 2 + "4"); // 34
+        
+        console.log(+true); // 1
+        console.log(-true); // -1
+        console.log(+false); // 0
+        console.log(-false); // -0
+        
+        
+        
+    
     </script>
 </head>
 <body>
