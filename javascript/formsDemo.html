@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+  <script>
+    function validation() {
+      // get values inside function
+      var email = document.getElementById("Email").value;
+      var password = document.getElementById("Password").value;
+
+      // clear previous errors
+      document.getElementById("emailError").innerHTML = "";
+      document.getElementById("passError").innerHTML = "";
+
+      if (email === "" || email.includes('@') === false) {
+        document.getElementById("emailError").innerHTML = "❌ Please enter a valid email";
+        return false; // stop form submission
+      }
+      if (password === "") {
+        document.getElementById("passError").innerHTML = "❌ Please enter a password";
+        return false;
+      }
+      return true; // allow submission
+    }
+  </script>
+</head>
+<body>
+  <form action="" onsubmit="return validation()">
+    <label for="Email">Email</label>
+    <input type="email" id="Email" placeholder="your email"> <br>
+    <span id="emailError" style="color:red"></span> <br>
+
+    <label for="Password">Password</label>
+    <input type="password" id="Password"> <br>
+    <span id="passError" style="color:red"></span> <br>
+
+    <input type="submit" value="submit">
+  </form>
+</body>
+</html>
+<!-- 7208546161 -->

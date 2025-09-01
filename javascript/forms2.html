@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>breed form</title>
+    <script>
+        
+        function validation() {
+            let Id = document.getElementById("id").value.trim();
+            let Name = document.getElementById("name").value.trim();
+            let Age = document.getElementById("age").value.trim();
+            let Breed = document.getElementById("breed").value.trim();
+            let Price = document.getElementById("price").value.trim();
+        
+            document.getElementById("idError").innerHTML = "";
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("ageError").innerHTML = "";
+            document.getElementById("breedError").innerHTML = "";
+            document.getElementById("priceError").innerHTML = "";
+
+            if (Id === '') {
+                document.getElementById("idError").innerHTML = "id cannot be empty"
+                return false;
+            }
+            if (Name === '') {
+                document.getElementById("nameError").innerHTML = "Name cannot be empty"
+                return false;
+            }
+            if (Age === '') {
+                document.getElementById("ageError").innerHTML = "id cannot be empty"
+                return false;
+            }
+            if (Breed === '') {
+                document.getElementById("breedError").innerHTML = "Breed cannot be empty"
+                return false;
+            }
+            if (Price === '') {
+                document.getElementById("priceError").innerHTML = "id cannot be empty"
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" onsubmit="return validation()">
+        <label for="id">Id</label>
+        <input type="text" id="id" placeholder="your id">
+        <span id="idError" style="color: red;"></span>
+        <br>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="your name">
+        <span id="nameError" style="color: red;"></span>
+        <br>
+
+        <label for="age">Age</label>
+        <input type="number" id="age">
+        <span id="ageError" style="color: red;"></span>
+        <br>
+
+        <label for="breed">Breed</label>
+        <input type="text" id="breed">
+        <span id="breedError" style="color: red;"></span>
+        <br>
+
+        <label for="price">Price</label>
+        <input type="number" id="price">
+        <span id="priceError" style="color: red;"></span>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+</body>
+
+</html>

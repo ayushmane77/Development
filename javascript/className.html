@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Name</title>
+    <script>
+        function fun(){
+            var msg = document.getElementsByClassName("example");
+            msg[0].innerHTML = "Hello world";
+            msg[1].innerHTML = "Hello Ayush";
+        }
+        function reset(){
+            var msg = document.getElementsByClassName("example");
+            msg[0].innerHTML = "paragraph-1";
+            msg[1].innerHTML = "paragraph-2";
+        }
+        function display(){
+            let msg = document.getElementsByClassName("example")[0];
+            alert(msg.textContent);
+        }
+    </script>
+</head>
+<body>
+    <h1>Working on getElementByClassName</h1>
+    <p class="example">example-1</p>
+    <p class="example">example-2</p>
+    <input type="button" value="click" onclick="fun()">
+    <input type="button" value="click" onclick="reset()">
+    <input type="button" value="click" onclick="display()">
+</body>
+</html>

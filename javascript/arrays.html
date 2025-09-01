@@ -52,16 +52,93 @@
             }
         }
         document.write("the largest even number is " + largest_even + "<br>");
+    
+    // ----------------------------------------------------------------------------------------------------
+        // ways of creating arrays in javascript
+        let arr = [2,6.5,13,"ayush",true,{id:101,name:"Ayush"},2*3];
+        // an array in javascript can store many collection of different values in indexed form.
 
-        // swapping the no with temp logic
-        var no1 = 34;
-        var no2 = 46;
-        var temp;
-        temp = no1;
-        no1 = no2;
-        no2 = temp;
-        document.write(no1 + "<br>");
-        document.write(no2 + "<br>");
+        let arr2 = new Array(33,41,51,23,64,32.3); // another way of creating new array
+        console.log(arr2);
+
+        arr.push(7); // adds new element at the end of the array
+        console.log(`new array after inserting is ${arr}`);
+
+        arr.pop(); // removes the last element in the array
+        console.log(`array after poping last element is ${arr}`);
+        
+
+        // difference between for of and for in loop 
+
+        for(let i of arr){ // this is for of loop which will will print values.
+            console.log(i);
+            //Iterates over the values of an iterable (like arrays, strings, Maps, Sets, etc.).
+            //Directly gives you the values, not indexes.
+            //Best for arrays, strings, Maps, Sets.
+        }
+        for(let i in arr){
+            console.log(i);
+            console.log(arr[i]);
+            // this is a for in loop which will have only index access not actual values.
+            // When used with an array, it gives you the indexes (as strings).
+            //Best for objects (to iterate over property names).
+        }
+
+        // different inBuild methods() in arrays
+        let array = [74,23.1,true,"Hello",{id:102,name:"Ayush"},null,[4,23,3]];
+        console.log(array.length);
+
+        // difference between slice and splice method in arrays
+        console.log(array.slice(1,3)); // 1st is inclusive and 2nd is exclusive
+        console.log(`original array is : ${array}`); // does not affect the original array
+        
+        console.log(array.splice(1,4)); // 1st is inclusive and 2nd is also inclusive
+        console.log(`original array is updated ${array}`); // It affects the original array. the spliced part is removed from
+        // original array.
+        
+        let a = [74,23.1,true,"Hello",{id:102,name:"Ayush"},null,[4,23,3]]
+        console.log(a.includes("Hello")); // will return true of false on the basis of element
+        // is present in array or not.
+
+        console.log(a.indexOf("Hello")); // returns the index of specified element
+        // if not present in array, then it return -1
+        console.log(a.indexOf(23.1));
+
+
+        //The .join() method converts all elements of an array into a single string, separated by the specified separator.
+        // Default separator → , (comma)
+        // You can provide your own separator (space " ", dash "-", empty string "", etc.)
+
+        //.join() does not change the original array → it returns a new string.
+        // If array elements are not strings, they will be converted to strings automatically.
+
+        let b = [3,5,2,6,7];
+        let str = b.join("-"); // .join() methods converts an array into string based on separator.
+        console.log(str);
+        
+        let newStr = b.join(); // by defaul, it is comma seperated.
+        console.log(newStr);
+        
+        let s = b.join(" "); // seperaed on the basis of spaces.
+        console.log(s); 
+        console.log(b);
+        
+        
+        // if want to reverse a string in js
+        let S = "hello";
+        
+        let rev = S.split("").reverse().join(""); // easy
+        
+        // reverse method
+
+        let Num = [4,42,54,31,12];
+        // let reversed = Num.reverse
+        console.log(Num.reverse()); // 
+        console.log(Num); // it affects the original array also.
+        console.log(Num.toString());
+        
+        
+
     </script>
 </head>
 <body>

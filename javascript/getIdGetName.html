@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getId and getName</title>
+    <script>
+        function fun(){
+            var msg = document.getElementById("parent-id");
+            var testing = msg.getElementsByClassName("test");
+            testing[0].innerHTML = new Date();
+        }
+    </script>
+</head>
+<body>
+    <div id="parent-id">
+        <p class="test">Hello world</p>
+        <p class="test">Hello world</p>
+    </div>
+    <input type="button" value="click" onclick="fun()">
+</body>
+</html>
