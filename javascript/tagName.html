@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Name</title>
+    <script>
+        // function fun(){
+        //     var collection = document.getElementsByTagName("ul")[0];
+        //     collection.getElementsByTagName("li")[0].innerHTML = "Coffi";
+        // }
+
+        function fun2(){
+            // var collection = document.getElementsByTagName("ul")[0];
+            var collection = document.getElementsByTagName("ul");
+            collection[0].getElementsByTagName("li")[0].style.color="red";
+            collection[1].getElementsByTagName("li")[0].style.color="red";
+        }
+    </script>
+</head>
+<body>
+    <!-- <ul>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <input type="button" onclick="fun()" value="click"> -->
+
+    <ul class="same">
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <ul class="same">
+        <li>Rice</li>
+        <li>Roti</li>
+    </ul>
+    <input type="button" value="click" onclick="fun2()">
+</body> 
+</html>
