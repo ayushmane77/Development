@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function qSelector(){
+            let element = document.querySelector(".box");
+            // element.style.backgroundColor = "red";
+            element.textContent = "Hello";
+        }
+        function qSelectorAll(){
+            let elements = document.querySelectorAll(".box"); // it returns an array
+            elements.forEach((value,key)=>{
+                value.textContent = "Ayush";
+                // key.style.backgrounColor = "blue";
+                value.style.backgroundColor = "red";
+                
+            })
+        }
+    </script>
+</head>
+<body>
+    <div class="box" id="box">box-1</div>
+    <div class="box" id="box">box-1</div>
+    <div class="box" id="box">box-1</div>
+    <div class="box" id="box">box-1</div>
+    <div class="box" id="box">box-1</div>
+    <button onclick="qSelector()">qSelector</button>
+    <button onclick="qSelectorAll()">qselectorAll</button>
+</body>
+</html>
