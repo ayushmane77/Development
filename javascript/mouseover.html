@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse over</title>
+</head>
+<body>
+    <p id="para">This is a paragraph</p>
+
+    First Name: <input type="text" id="name">
+    <br>
+    <span id="new"></span>
+    <br>
+    <span id="n2"></span>
+    <br>
+    <script>
+        // let over = document.getElementById("para");
+        // over.addEventListener("mouseover",()=>{
+        //     over.style.color = "red";
+        // });
+
+        // over.addEventListener("mouseleave",()=>{
+        //     over.style.color = "black";
+        // })
+
+        // or
+
+        para.addEventListener("mouseover",()=>{
+            para.style.color = "red";
+        });
+        para.addEventListener("mouseleave",()=>{
+            para.style.color = "black";
+        });
+
+        // let Para = document.getElementById("name");
+        // let n = document.getElementById("new");
+        // Para.addEventListener("keyup",()=>{
+        //     n.innerHTML = Para.value;
+        // })
+
+        // or
+
+        let P = document.querySelector("input");
+        let n1 = document.querySelector("#new");
+        P.addEventListener("keyup",()=>{
+            n1.innerHTML = P.value.toUpperCase();
+        });
+        let n2 = document.querySelector("#n2");
+        P.addEventListener("keydown",()=>{
+            n2.innerHTML = P.value;
+        })
+
+        document.write(eval(3**3));
+    </script>
+</body>
+</html>
