@@ -33,22 +33,59 @@
         document.write(modifiedNum2 + "<br>"); // js consider false as 0, so prints 0
         document.write(typeof(modifiedNum2) + "<br>"); // prints number
 
+        // converting null datatype to number;
+        let isNull = null;
+        console.log(isNull); // will print null
+        console.log(typeof(isNull)); // prints object ( as js considers null as an object)
+        let isNum = Number(isNull);
+        console.log(isNum); // prints value as 0 (so a null considers its number value as 0)
+        console.log(typeof(isNum)); // prints a number
+        
+        // converting an undefined to number
+        let ud;
+        console.log(ud); // prints undefined
+        console.log(typeof(ud)); // prints undefined
+        let newNum = Number(ud); 
+        console.log(newNum); // prints NaN
+        console.log(typeof(newNum)); // prints number
+
+        // converting an object to number
+        let obj1 = {
+            id:103,
+            name:"Ayush",
+            skill:"Programming"
+        }
+        console.log(obj1); // prints actual object
+        console.log(typeof(obj1)); // prints object
+        let Number2 = Number(obj1);
+        console.log(Number2); // prints NaN
+        console.log(typeof(Number2)); // prints Number
+        
+        
         // converting number datatype to boolean datatype
         let c = 1;
         let isEmployee = Boolean(c);
         document.write(isEmployee + "<br>"); // prints true as 1 is treated as true
         document.write(typeof(isEmployee) + "<br>");
 
-        let z = 32;
-        let newZ = z.toString(z); // toString() method can also be used to convert any data type to string.
-        console.log(newZ);
-        
 
         let d= 0;
         let isCurropted = Boolean(d);
         document.write(isCurropted + "<br>"); // prints false as 0 is treated as false
         document.write(typeof(isCurropted) + "<br>");
 
+        let h = 23;
+        console.log(`the original value is ${h}`); // prints original value
+        console.log(typeof(h)); // number
+        let h1 = Boolean(h);
+        console.log(`the new conveted value of ${h} is ${h1}`); // prints true as its new value.
+        console.log(typeof(h1)); // prints boolean
+
+        // so in conclusion, we can say that
+        // javascript converts (or considers) a number apart from 0 as true.
+        // and considers 0 as false.
+        
+        // converting a string data type to boolean data type.
         let name = "Ayush";
         let modiName = Boolean(name);
         document.write(modiName + "<br>"); // prints true as it considers every string 
@@ -60,6 +97,18 @@
         document.write(modiStr + "<br>"); // prints true 
         document.write(typeof(modiStr) + "<br>");
 
+        // In conclusion, every string will be converted to true boolean data type.
+
+
+        // converting a null to boolean data type
+        let NULL = null;
+        console.log(`the value is ${NULL}`); // prints null
+        console.log(typeof(NULL)); // prints object
+        let toBoolean = Boolean(NULL);
+        console.log(`the converted value of ${NULL} is ${toBoolean}`); // prints its value as false
+        console.log(typeof(toBoolean)); // prints boolean
+        
+        
         // converting number to string datatype.
         let num = 72;
         document.write(num + "<br>");
@@ -69,6 +118,26 @@
         // using the String(interface)
         document.write(toString + "<br>");
         document.write(typeof(toString) + "<br>"); // prints String
+
+        let z = 32;
+        let newZ = z.toString(z); // toString() method can also be used to convert any data type to string.
+        console.log(newZ);
+
+        // converting an undefined to string.
+        let UD;
+        console.log(`this is ${UD}`); // prints undefined
+        console.log(typeof(UD)); // prints undefined
+        let ToString = String(UD);
+        console.log(ToString); // prints undefined
+        console.log(typeof(ToString)); // prints string as its data type
+        
+        let val = null;
+        console.log(`this is ${val}`); // prints null
+        console.log(typeof(val));
+        let STR = String(val);
+        console.log(`the converted value of ${val} is ${STR}`); // prints "null"
+        console.log(typeof(STR)); // prints string
+        
 
         // converting a boolean to a string
         let a = true;
