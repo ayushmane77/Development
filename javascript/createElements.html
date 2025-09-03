@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create html elements</title>
+</head>
+<body>
+    <div id="main">
+        <h1>Header_1</h1>
+    </div>
+
+    <div id="div">
+
+    </div>
+    <script>
+        let para = document.createElement("p");
+        para.textContent = "this is a paragraph"
+        // or
+        // let text = document.createTextNode("a paragraph");
+        // para.appendChild(text);
+        document.getElementById("main").appendChild(para);
+
+        let h2 = document.createElement("h2");
+        h2.textContent = "new H2";
+        document.getElementById("div").appendChild(h2);
+
+        let h3 = document.createElement("h2");
+        h2.textContent = "a new h3 tag";
+        document.querySelector("body").appendChild(h3);
+    </script>
+</body>
+</html>
