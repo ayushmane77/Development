@@ -5,55 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        // var arr = [2,4,7,6,1];
-        // document.write(arr[0] + "<br>")
-        // document.write(arr[1] + "<br>")
-        // document.write(arr[2] + "<br>")
-        // document.write(arr[3] + "<br>")
-        // document.write(arr[4] + "<br>")
-        // for(i=0;i<arr.length;i++){
-        //     document.write(arr[i] + "<br>")
-        // }
-        // let names = ["ayush","saket","tushar","pramod","sahil"];
-        // for(i=0;i<names.length;i++){
-        //     document.write(names[i] + "<br>")
-        // }
-        // var num = [2,5,1,7,8];
-        // document.write(num.slice(2,5  ));
-
-        // largest and all even numbers in an array
-        var numbers = [2,4,1,6,7,10,3];
-        var larg = numbers[0];
-        for(i=0;i<numbers.length;i++){
-            
-            if(numbers[i]>larg){
-                larg = numbers[i];
-            }
-            if(numbers[i]%2==0){
-                document.write(numbers[i] + " is even " + " <br>")
-            }
-        }
-        document.write("the largest number is " + larg + "<br>")
-        // smallest number in an array
-        var small = numbers[0];
-        for(i=0;i<numbers.length;i++){
-            if(numbers[i]<small){
-                small = numbers[i];
-            }
-        }
-        document.write("The smallest number is "+ small + "<br>");
-
-        // largest even number in an array
-        var num = [98,101,105,191,48,150];
-        var largest_even = numbers[0];
-        for(i=0;i<num.length;i++){
-            if(num[i]%2==0){
-                largest_even = Math.max(largest_even,num[i]);
-            }
-        }
-        document.write("the largest even number is " + largest_even + "<br>");
-    
-    // ----------------------------------------------------------------------------------------------------
         // ways of creating arrays in javascript
         let arr = [2,6.5,13,"ayush",true,{id:101,name:"Ayush"},2*3];
         // an array in javascript can store many collection of different values in indexed form.
@@ -119,7 +70,7 @@
         let newStr = b.join(); // by defaul, it is comma seperated.
         console.log(newStr);
         
-        let s = b.join(" "); // seperaed on the basis of spaces.
+        let s = b.join(" "); // seperated on the basis of spaces.
         console.log(s); 
         console.log(b);
         
@@ -136,9 +87,91 @@
         console.log(Num.reverse()); // 
         console.log(Num); // it affects the original array also.
         console.log(Num.toString());
-        
-        
 
+        // pushing new element at the end of array
+        let Arr = [43,true,"Hello",{id:102,name:"secret"}];
+        let Arr2 = [false,"try",72.2,90];
+        Arr.push(Arr2); // will update the original array
+        console.log(Arr); // [43,true,"Hello",{id:102,name:"secret"},[false,"try",72.2,90]];
+        
+        console.log(Arr[4][1]); // prints try.
+
+        let Arr3 = [42,64.3,true,{id:103,programming:"javascript"}];
+        let Arr4 = ["java",true,52];
+        let Arr5 = Arr3.concat(Arr4); // adds every element as a new index from second array.
+        console.log(Arr5);
+        
+        console.log(Arr3); // does not change the original array
+
+        let mix = [78,true,"true",{id:109}];
+        let Mix = ["java",90];
+        let anotherMix = [66,"Hello",3.14]
+        let mixedArr = [...mix, ...Mix, ...anotherMix]; // will merge arrays with every new unique index.
+        console.log("new mixed array is ");
+        
+        console.log(mixedArr);
+        console.log(mix); // does not change the original array
+
+        let marvel = [["ironman","spiderman","hulk","thor"],["batman","superman"]];
+        console.log(`the length of marvel array is ${marvel.length}`); // will return 2 as its 
+        // original length.
+        console.log(marvel.flat(Infinity)); 
+        console.log(marvel.flat(Infinity).length); // will return 6 as its new length
+        
+        console.log(Array.isArray(marvel)); // Array is an interface which provides many inbuild methods
+        
+        // ----------------------------------------------------------------------------------------------------
+
+        // var arr = [2,4,7,6,1];
+        // document.write(arr[0] + "<br>")
+        // document.write(arr[1] + "<br>")
+        // document.write(arr[2] + "<br>")
+        // document.write(arr[3] + "<br>")
+        // document.write(arr[4] + "<br>")
+        // for(i=0;i<arr.length;i++){
+        //     document.write(arr[i] + "<br>")
+        // }
+        // let names = ["ayush","saket","tushar","pramod","sahil"];
+        // for(i=0;i<names.length;i++){
+        //     document.write(names[i] + "<br>")
+        // }
+        // var num = [2,5,1,7,8];
+        // document.write(num.slice(2,5  ));
+
+        // largest and all even numbers in an array
+        var numbers = [2,4,1,6,7,10,3];
+        var larg = numbers[0];
+        for(i=0;i<numbers.length;i++){
+            
+            if(numbers[i]>larg){
+                larg = numbers[i];
+            }
+            if(numbers[i]%2==0){
+                document.write(numbers[i] + " is even " + " <br>")
+            }
+        }
+        document.write("the largest number is " + larg + "<br>")
+        // smallest number in an array
+        var small = numbers[0];
+        for(i=0;i<numbers.length;i++){
+            if(numbers[i]<small){
+                small = numbers[i];
+            }
+        }
+        document.write("The smallest number is "+ small + "<br>");
+
+        // largest even number in an array
+        var num = [98,101,105,191,48,150];
+        var largest_even = numbers[0];
+        for(i=0;i<num.length;i++){
+            if(num[i]%2==0){
+                largest_even = Math.max(largest_even,num[i]);
+            }
+        }
+        document.write("the largest even number is " + largest_even + "<br>");
+        document.write(eval("4*4+2"))
+   
+        
     </script>
 </head>
 <body>

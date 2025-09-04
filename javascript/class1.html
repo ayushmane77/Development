@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Example{
+            constructor(empId,empName){
+                this.id = empId;
+                this.name = empName;
+            }
+            // or can even work with function approach
+            empDetails(){
+                document.write("ID is " + this.id + "<br>");
+                document.write("ID is " + this.name + "<br>");
+            }
+        }
+        let obj = new Example(201,"Ayush");
+        document.write(obj.id + "<br>");
+        document.write(obj.name + "<br>");
+
+        obj.empDetails();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
