@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var msg = function(){
+        var msg = function(){ // anonymous functions without any function name
             return "Hello " + "<br>";
         }
         document.write(msg());
 
-        var add = function(num1,num2){
+        var add = function(num1,num2){ // with parameters
             return num1 + num2;
         }
+
+        let subtract = (num1,num2)=>{ // anonymous arrow function
+            return num1- num2;
+        }
         document.write(add(4,8));
+        document.write("<br>")
+        document.write(subtract(80,10));
     </script>
 </head>
 <body>
