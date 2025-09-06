@@ -5,21 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objects demo</title>
     <script>
+        // there are different ways of creating an objects in javascipt
+        // 1. by using object literal as shown in below example {key: "value"}
+
         var obj = {
             id:101,
             name:"Ayush",
+            "mobile number": "90XXXXXX",
             age:21,
             emailId:"ayushmane145@gmail.com",
             salary:1000000,
+            greet:()=>{
+                console.log(`my Name is ${obj["name"]}`); // both work
+                // console.log("my Name is " + obj.name); 
+                
+            },
             id:109
         }
         document.write(obj + "<br>");
-        document.write(obj["id"] + "<br>")
-        document.write(obj["name"] + "<br>")
-        document.write(obj["age"] + "<br>")
-        document.write(obj["emailId"] + "<br>")
-        document.write(obj["salary"] + "<br>")
-        document.write(obj["hello"] + "<br>")
+        document.write(obj["id"] + "<br>");
+        document.write(obj["name"] + "<br>");
+        document.write(obj["age"] + "<br>");
+        document.write(obj["emailId"] + "<br>");
+        document.write(obj["salary"] + "<br>");
+        document.write(obj["hello"] + "<br>");
+        document.write(obj["mobile number"] + "<br>");
+        obj.greet();
+
+        
+        // 2. by using new object 
+        let obj2 = new Object();
+        
+        obj2.id = 102; // the key is treated as string in objects
+        obj2["name of person"] = "Ayush";// by default js consider keys as string
+        obj2.age = 22,
+        obj2.lastLoggedIn = [22,27,29],
+        obj2.social = {
+            instagram: "ayush@.com",
+            twitter:" beingAyu..."
+        };
+        obj2.contacts = function(){
+            return `my name is ${obj2["name of person"]}`;
+        }
+        console.log(obj2["id"]); // printing object values using [""] syntax
+        console.log(obj2.id); // prints 102 , so both . and [""] works . 
+        
+        console.log(obj2.lastLoggedIn); // similary prints an array
+        console.log(obj2["lastLoggedIn"]); // also this works and prints an array
+        
+        console.log(obj2["age"]); // prints age
+        console.log(obj2.social["instagram"]); // prints "ayush@.com"
+        console.log(obj2.social.twitter); // prints "beingAyu..."
+        console.log(obj2["social"]["instagram"]); // prints "ayush@.com
+        console.log(obj2["social"].instagram); // also prints "ayush@.com
+        console.log(obj2.contacts()); // prints the returned value from function
+        
+
+        console.log(obj2.hasOwnProperty("age")); // specifies whether the property(or key) is present inside object
+        
+        // 3. By using Object.create() 
+
+        let CatFamily = {
+            animal : "cats",
+            lifeSpan : 20,
+            sound : function(){
+                return ("cats family is big");
+            }
+        }
+        let Tigers = Object.create(CatFamily); // creates a new object from existing object. Used for prototypal inheritance.
+        Tigers.animal = "Tiger"; // updating the animal property( or key)
+        Tigers.weight = "200kg"; // adding new property to child object
+
+        console.log(Tigers.animal); // prints Tiger
+        console.log(CatFamily["animal"]); // prints "cat family"
+        console.log(CatFamily.sound()); // prints function returned value
+        console.log(Tigers.sound()); // inherited from parent 'CatFamily', so it will also print same returned value
+        
+        
+        
+        
     </script>
 </head>
 <body>
