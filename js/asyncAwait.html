@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    async function findWeather(){
+        let mumbaiWeather = new Promise((res,rej)=>{
+            setTimeout(()=>{
+                res("Mumbai weather is 27deg");
+            },5000);
+        })
+        let delhiWeather = new Promise((res,rej)=>{
+            setTimeout(()=>{
+                res("delhi weather is 24deg");
+            },2000)
+        });
+        console.log("finding mumbai weather");
+        let awaitMumbai = await mumbaiWeather;
+        console.log("mumbai weather is " + awaitMumbai);
+        console.log("finding delhi weather");
+        let awaitDelhi = await delhiWeather;
+        console.log("delhi weather is " + awaitDelhi);
+    }
+    findWeather();
+    
+</script>
+</html>

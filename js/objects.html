@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objects demo</title>
+    <title>Objects part-1</title>
     <script>
         // there are different ways of creating an objects in javascipt
         // 1. by using object literal as shown in below example {key: "value"}
 
+        const mysmb = Symbol("key"); // way of creating a symbol
         var obj = {
             id:101,
             name:"Ayush",
@@ -15,24 +16,43 @@
             age:21,
             emailId:"ayushmane145@gmail.com",
             salary:1000000,
+            [mysmb]:"newKey",
             greet:()=>{
                 console.log(`my Name is ${obj["name"]}`); // both work
                 // console.log("my Name is " + obj.name); 
+
+                // console.log(`MY NAME IS ${this.name}`); will not work
+                // Arrow functions don’t bind their own this; they use the surrounding one.
                 
             },
             id:109
         }
+        obj.age = 22;  // we can also overide the property age outside the object also
+        // and also add new property(key : value ) outside the object also like
+        obj.isPrepared = true;
+        // to make sure that the object properties or not changed( or modified), 
+        // we use Object.freeze();
+        Object.freeze(obj);
+        obj.age = 24; // the property age will not get updated because of Object is freezed
+        obj.height = "6 feet"; // and also now new property(key:value) cannot be added to object which is freezed.
+
         document.write(obj + "<br>");
         document.write(obj["id"] + "<br>");
         document.write(obj["name"] + "<br>");
-        document.write(obj["age"] + "<br>");
+        document.write(obj["age"] + "<br>"); // prints 22
         document.write(obj["emailId"] + "<br>");
         document.write(obj["salary"] + "<br>");
         document.write(obj["hello"] + "<br>");
         document.write(obj["mobile number"] + "<br>");
         obj.greet();
+        document.write(obj["isPrepared"] + "<br>"); // prints true 
 
+        // document.write(obj.mysmb + "<br>"); // does not shows error, but is invalid. shows undefined.
+        // document.write(typeof(obj.mysmb) + "<br>") // also its datatype as shown as undefined.
+        document.write(obj[mysmb] + "<br>"); // prints newKey
+        document.write(typeof(obj[mysmb]) + "<br>"); // prints string
         
+        document.write(obj["height"]); // prints undefined since the object was freezed
         // 2. by using new object 
         let obj2 = new Object();
         
@@ -45,7 +65,8 @@
             twitter:" beingAyu..."
         };
         obj2.contacts = function(){
-            return `my name is ${obj2["name of person"]}`;
+            // return `my name is ${obj2["name of person"]}`; // both will work
+            return `my name is ${this.lastLoggedIn}`
         }
         console.log(obj2["id"]); // printing object values using [""] syntax
         console.log(obj2.id); // prints 102 , so both . and [""] works . 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects-part2</title>
+    <script>
+        let obj = {
+            id:101,
+            name:{
+                firstName: "Trevor",
+                lastName: "Philips"
+            }
+        }
+        console.log(obj); // print entire object
+        console.log(typeof(obj)); // prints object
+
+        console.log(obj.name); // only prints nested name object
+        console.log(obj.hasOwnProperty("name")); // prints true
+        console.log(obj.name.firstName) // prints Trevor
+        console.log(obj["name"]["lastName"]) // prints Philips
+
+        // so conclusion, an object can have many nested objects and they can be 
+        // accessed by . or []
+
+        let obj2 = {1:"a",2:"b"};
+        let obj3 = {3:"c",4:"d"};
+        let obj4 = {5:"e",6:"f"};
+        // now if we want to merge all these objects into a single object,
+        // we use
+        let mergeObj = {obj2,obj3,obj4};
+        console.log(mergeObj); // same problem as array  {{obj2},{obj3},{obj4}}
+        // all objects are treated as unique indexes but not objects elements
+        
+        let MergeObj = Object.assign({},obj2,obj3,obj4);
+        console.log(MergeObj); // every elements of different object is treated as new unique key:value pair.
+
+        let newMergeObj = {...obj2,...obj3,...obj4}; // using spread operator
+        console.log(newMergeObj); // again every element as added as a new unique key:value pair.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let Marks = 0;
+    async function findMarksPercentage(){
+        let totalMarks = new Promise((res,rej)=>{
+            setTimeout(()=>{
+                Marks = 20 + 90 + 40;
+                res("marks are " + Marks);
+            },5000);
+        });
+        console.log("fetching marks....");
+        // let awaitMarks = await totalMarks;
+        // console.log("the total marks is " + awaitMarks);
+        await totalMarks;
+        totalMarks.then((m)=>{
+            console.log(`Marks are ${m}`);
+            
+        })
+        .catch((er)=>{
+            console.log(er);
+            
+        })
+        
+
+        let percentage = new Promise((res,rej)=>{
+            setTimeout(()=>{
+                let percent = parseFloat((Marks/300)*100);
+                res("percentage are: " + percent);
+            },3000);
+        });
+       
+        console.log("fetching percentage ....");
+        let awaitPercent = await percentage;
+        console.log("total percentage is " + awaitPercent);
+        
+    }
+    findMarksPercentage();
+</script>
+</html>
+
+<!-- create a new promise using grade -->
+
+function fun(num1,num2)
+// fun(4,2);

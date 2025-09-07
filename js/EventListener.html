@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">when you click on document the text will appear</p>
+    <p id="demo"></p>
+    <script>
+        // document.addEventListener("click",()=>{
+        //     document.getElementById("demo").innerHTML = "Hello";
+        // });
+
+        // or
+        // document.addEventListener("click", myfunction);
+        // function myfunction(){
+        //     document.getElementById("demo").innerHTML = "Hello";
+        //     document.querySelector("body").style.backgroundColor = "red";
+        // }
+
+        // or
+
+        
+        let p1 = document.getElementById("para");
+        let msg = function(){
+            let p2 = document.getElementById("demo");
+            p2.innerHTML = "Hello msg";
+            p2.style.backgroundColor = "red";
+        }
+        p1.addEventListener("click",msg);
+        
+    </script>
+</body>
+</html>

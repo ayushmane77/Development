@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [3,4,25,2];
+        
+        // console.log(newArr);
+        let newA = arr.map((val)=>{
+            return val+2;
+        });
+        // let newA = arr.map((value)=>{value+2});
+        console.log(newA);
+        // map method  is used to create a new array by transforming it according to a function passed as an argument.
+        // This call back function are often written as array function.
+
+        // let arrr = [23,44,66,25];
+        // let evenArrr = arrr.filter((val)=>{
+        //     if(val%2==0){
+        //         return val;
+        //     }
+        // });
+        // console.log(evenArrr);
+
+        function even(element){
+            if(element%2==0){
+                return element;
+            }
+        }
+        let A = [56,23,64,23];
+        let newArr = A.filter(even);
+        console.log(newArr);
+        console.log(Array.isArray(A));
+        console.log(eval(3*(10**2)));
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
