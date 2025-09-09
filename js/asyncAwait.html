@@ -28,6 +28,25 @@
         console.log("delhi weather is " + awaitDelhi);
     }
     findWeather();
+
+    async function asynDemo() {
+        let prom = new Promise((res,rej)=>{
+        let task = true;
+        if(task){
+            res("task completed");
+        }
+        else{
+            rej("task not completed");
+        }
+        });
+        return prom;
+    }
+    asynDemo().then((data)=>{
+        console.log(data);
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
     
 </script>
 </html>
