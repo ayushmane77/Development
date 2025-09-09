@@ -25,6 +25,23 @@
     .catch((error)=>{
         console.log(error);
         
+    });
+
+    let newPromise = new Promise((res,rej)=>{
+        let task = true;
+        if(task){
+            res("task completed");
+        }
+        else{
+            rej("task failed");
+        }
     })
+    .then((data)=>{
+        console.log(data);
+    })
+    .catch((err)=>{
+        console.log(err);
+    });
+
 </script>
 </html>
