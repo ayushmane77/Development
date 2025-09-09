@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>await demo</title>
+</head>
+<body>
+    <script>
+        async function demo(){
+            let promise = new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    let task = true;
+                    if(task){
+                        res("completed")
+                    }
+                    else{
+                        rej("NOt")
+                    }
+                },3000)
+            });
+            promise.then((data)=>{
+                console.log(data);
+                
+            }).catch((err)=>{
+                console.log(err);
+                
+            });
+
+            let promiseAwait = await promise;
+            console.log(promiseAwait);
+            
+            console.log("this is console");
+            
+        }
+        demo();
+    </script>
+</body>
+</html>
