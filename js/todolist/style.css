@@ -1,0 +1,75 @@
+.container{
+    margin: auto;
+    /* background-color: gray; */
+    max-width: 700px;
+    border: 2px solid ;
+}
+#inputText{
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px; 
+    width: 50%;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 2px 2px 5px grey;
+}
+#Add{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #0BA6DF;
+    width:90px ;
+    border-radius: 5px;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 1rem;
+    
+}
+#Add:hover{
+    background-color:#3338A0;
+    cursor: pointer;
+}
+ul li{
+    list-style: none;
+    border: none;
+    box-shadow: 2px 2px 5px grey;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    width: 90%;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    text-wrap: wrap;
+    overflow-x: auto;
+}
+.completed{
+    text-decoration: line-through;
+    color: red;
+}
+li:hover{
+    background-color:#DCDCDC;
+}
+li button{
+    background-color: red;
+    border: none;
+    color: white;
+    /* font-weight: bolder; */
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+li button:hover{
+    background-color: darkred;
+}
+li input{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
