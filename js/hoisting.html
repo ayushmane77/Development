@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    <script>
+        console.log(num); // gives undefined
+        var num = 10;
+        
+        // console.log(num2); // gives reference error
+        // let num2= 10;
+
+        // same thing happens for const as let
+
+        // but if
+        let a;
+        console.log(a); // now it will show undefined.
+        a = 90;
+
+        fun1(); // will get executed even though it is defined before function declarion
+        // so in short, hoisting works in case of function declarions case.
+        function fun1(){
+            console.log("hello");
+            
+        }
+        // fun2(); // will get reference error as it does not work for function expression
+        var fun2 = ()=>{
+            console.log("hello2");    
+        }
+        fun2();
+        // 27 project mock
+    </script>
+</body>
+</html>
