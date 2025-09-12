@@ -10,6 +10,48 @@
         }
         document.write(msg())
 
+        // but what if want to return an object from an arrow function in a single line
+        let fun = () =>{
+            let obj ={
+                id:102,
+                name: "Ayush"
+            }
+            return obj;
+        }
+        console.log(fun());
+
+        // but what if want to return an object from an arrow function in a single line
+        let fun2 = () =>{ return {id:102,name:"A"}} // will also work
+        console.log(fun2()); // prints object only if 'return' keyword is specified in the single line statement also.
+
+        // or we can open-close bracket syntax also
+        let fun3 = () => ({id:104,name:"a"}); // also return an object by enclosing it in ()
+        console.log(fun3());
+        
+        
+        // arrow functions can also return values implicitly(without specifying the 'return' keyword)
+        // eg
+        let add = (num1,num2) => num1 + num2; // no need to use the 'return' keyword when executed in single line
+        console.log(add(3,8));
+
+        let addOne = (num) => {num + 1}; // when curly braces are used in arrow function, there should be return statement
+        console.log(addOne(6)); // will show undefined as anything written inside the curly braces of a function should have a return type.
+        
+        let subtractOne = (num) => {return num - 1}; // will work now because ther is return keyword inside curly braces.
+        console.log(subtractOne(8));
+
+
+        // also by using open and close brackets
+
+        let multiply = (num1,num2) => (num1 * num2); // if open and close brackets are added , no need to specify return keyword
+        console.log(multiply(3,5));
+
+        let divide = (num1,num2) => ( // can also be used like this.
+            num1 / num2           // but more than 1 line will result to an error. 
+        );
+        console.log(divide(8,2));
+        
+        
         // var area = (radius)=>{
         //     return 3.14 * radius * radius;
         // }
@@ -37,7 +79,7 @@
         }
         secondFunction(3,4);
 
-        
+        // const res = await fetch('https://dummyjson.com/products');
     </script>
 </head>
 <body>
