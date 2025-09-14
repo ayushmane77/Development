@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array destructing</title>
+</head>
+<body>
+    <script>
+        // array destructring
+        let arr = [1,2,3,4,5,6];
+        let [a,b,c,d,...rest] = arr;
+        console.log(a); // 1
+        console.log(b); // 2
+        console.log(rest); // [5,6] return an array of remaining elements
+        console.log(rest[1]); // prints 5
+
+        let fruits = ["apple","mango","banana","grapes"];
+        console.log("name of fruits are");
+        console.log(fruits[0]);
+        console.log(fruits[1]);
+        console.log(fruits[2]);
+        console.log(fruits[3]);
+    
+        // but by doing array destructuring, instead of repeating code
+        const [apple,mango,banana,grapes] = fruits;
+        console.log(apple,mango,banana,grapes);
+        
+        // now to skip some items in between 
+        let arr2 = ["a","b","c","d","e"];
+        const [first,second,,,fifth] = arr2; // for skipping use ,, ( for 'n' no of times which you want to skip)
+        console.log(first,second,fifth);
+
+        const arr3 = [10];
+        const [num1,num2 = 20] = arr3; // can also assign a new variable and its value in the destructuring
+        console.log(num1, num2);
+        
+        
+        
+        // object destructuring
+
+        let obj = {id:101,name:"ayush"}
+        let {id,name} = obj;
+        console.log(obj); // prints the object
+        console.log(name); // prints only the name
+
+        let obj2 = {
+            id:104,
+            nameOfInstructor: "Ayush",
+            skills : ["java","javascript","DSA"],
+            isCertified:true
+        }
+
+        const {skills} = obj2;
+        console.log(skills); // an array ["java","javascript","DSA"]
+
+        const{nameOfInstructor : instructor} = obj2; // can also give new name (renaming variables) by destructuring
+        console.log(instructor);
+
+        // nested object destructuring
+
+        let obj3 = {
+            name: "Ayush",
+            marks:{
+                science:98,
+                maths:99
+            }
+        }
+        console.log(obj3.name);
+        console.log(obj3["marks"].science);
+        console.log(obj3.marks.maths);
+        
+        console.log("now doing nested object destructuring ");
+        const {name:Name,marks:{science,maths}} = obj3
+        console.log(Name,science,maths);
+        
+        //function paramaters destructuring 
+
+        // if normally passing an object as an argument to other function, we would do this like this
+        console.log("the normal way of passing an object as an argument");
+        
+        function print(details){
+            console.log(details.contactNo); // prints "56XXXXX"
+            console.log(details.address); // prints "gtt cal xtz"
+            
+        }
+
+        let obj5 = {
+            contactNo : "56XXXXXX",
+            address : "gtt cal xtz"
+        }
+
+        print(obj5);
+
+        // using object destructuring in the function parameters
+
+        function greet({id:ID,profession}){
+            console.log(ID);
+            console.log(profession);
+            console.log(`${ID} and profession is ${profession}`);
+        }
+        let obj4 = {
+            id:108,
+            profession : "Software Developer"
+        }
+        greet(obj4);
+        
+        
+    </script>
+    
+</body>
+</html>
