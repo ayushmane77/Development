@@ -22,3 +22,7 @@
   object-fit: cover;      /* crop images to fill space */
   width: 100%;            /* take full card width */
 }
+.lightDark{
+    background-color: black;
+    color: white;
+}
