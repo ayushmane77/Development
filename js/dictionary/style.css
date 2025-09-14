@@ -1,0 +1,24 @@
+@media  screen and (max-width:600px) {
+    .Example {
+        margin-left: 10px !important;
+        border-left:none !important;
+    }
+    
+}
+@media screen  and (max-width:619px) {
+    .searchBox{
+        display: grid !important;
+        grid-template-columns: 2fr auto !important;
+        margin: auto !important;
+        max-width: 90% !important;  /* ✅ add some space from left/right */
+        gap: 8px !important;
+    }
+}
+@media screen and (max-width: 350px) {
+    .searchBox {
+        grid-template-columns: 1fr !important;
+    }
+    .searchBox button {
+        width: 100%;
+    }
+}

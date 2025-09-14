@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #637AB9;">
+    <div class="container" style="margin: auto;background-color:white;max-width: 700px;">
+        <div class="searchBox" style="margin:auto;margin-top: 10px;max-width: 600px;display: grid;grid-template-columns: 3fr 1fr;gap: 10px;padding-top: 10px;">
+            <input type="text" id="inputWord" placeholder="enter your word" style="padding: 10px;border: none;border-bottom: 5px solid #637AB9;font-family: 'Times New Roman', Times, serif;">
+            <button id="search" style="background-color: #637AB9;border: none;border-radius: 5px;color: white;padding: 10px;font-weight: bolder;font-family: Verdana, Geneva, Tahoma, sans-serif;">Search</button>
+        </div>
+        
+        <span id="emptyError" style="margin-left: 43px;"></span>
+        <div class="box1" style="display: flex;margin: 5px auto;max-width: 600px;justify-content: flex-start;justify-content: space-between;flex-wrap: wrap;">
+            <h2 id="word" style="font-weight: bolder;font-family: Arial, Helvetica, sans-serif;flex-grow: 6;"></h2>
+            <audio id="Audio"></audio>
+        </div>
+        
+        <div class="box2" style="display: flex;margin: auto;max-width: 600px;">
+            <span id="POS" style="color: gray;"></span>
+            <span id="descriptiveWord" style="color: gray;"></span>
+        </div>
+        
+        <p id="actualMeaning" style="display: block;margin: auto;max-width: 600px;margin-top: 10px;"></p>
+        <p id="example" class="Example" style="overflow-x: auto;margin: auto;max-width: 600px;margin-top: 10px;border-left: 5px solid #637AB9;"></p>
+        <div id="syno" style="margin: auto;max-width: 600px;margin-top: 10px;"></div>
+        <div id="anti" style="margin: auto;max-width: 600px;margin-top: 10px;padding-bottom: 20px;"></div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
