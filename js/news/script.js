@@ -1,4 +1,4 @@
-// const API_KEY = "dfd9f7cb05724dcf986fe6640a45101d";
+// const API_KEY = "dfd9f7cb05724dcf986fe6640a45101d"; // this is a wrong api key. create your own key from newsapi.org
 let inputWord = document.getElementById("inputWord");
 let SearchBtn = document.getElementById("SearchBtn");
 let inputError = document.getElementById("inputError");
