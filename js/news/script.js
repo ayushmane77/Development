@@ -1,4 +1,4 @@
-const API_KEY = "dfd9f7cb05724dcf986fe6640a45101c";
+// const API_KEY = "dfd9f7cb05724dcf986fe6640a45101d";
 let inputWord = document.getElementById("inputWord");
 let SearchBtn = document.getElementById("SearchBtn");
 let inputError = document.getElementById("inputError");
@@ -45,20 +45,20 @@ async function CreateNewCard(newArr){
         container.appendChild(cloneCard);
         
     });
-    
 }
 
 inputWord.addEventListener("keyup",(e)=>{
     if(e.key === "Enter"){
         fetchingData();
     }
-})
+});
+
 SearchBtn.addEventListener("click",fetchingData);
 async function fetchingData(event){
     event.preventDefault();
     try{
-        console.log("fetching function"); // {aricles, status, totalResuts}
-        console.log(`the input value is ${inputWord.value}`); // in results , I get an array of 96 objects
+        // console.log("fetching function"); // {aricles, status, totalResuts}
+        // console.log(`the input value is ${inputWord.value}`); // in results , I get an array of 96 objects
 
         let templateCard = document.getElementById("card"); 
         // document.getElementById("card").style.display = "none";
@@ -84,9 +84,9 @@ async function fetchingData(event){
         }
         let response = await data.json();
         // console.log(response);
-        let arr = response.articles;
-        console.log(arr);
-        console.log(typeof arr);
+        // let arr = response.articles;
+        // console.log(arr);
+        // console.log(typeof arr);
         CreateNewCard(arr);
         
     }
