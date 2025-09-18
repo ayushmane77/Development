@@ -1,4 +1,5 @@
 // const API_KEY = "dfd9f7cb05724dcf986fe6640a45101d"; // this is a wrong api key. create your own key from newsapi.org
+const API_KEY = "dfd9f7cb05724dcf986fe6640a45101c";
 let inputWord = document.getElementById("inputWord");
 let SearchBtn = document.getElementById("SearchBtn");
 let inputError = document.getElementById("inputError");
@@ -29,7 +30,7 @@ async function CreateNewCard(newArr){
     let a = document.getElementById("card");
     
     newArr.forEach(element => {
-        console.log(element.description);
+        // console.log(element.description);
         let cloneCard = a.cloneNode(true);
         cloneCard.querySelector("p").textContent = element.description;
         cloneCard.querySelector("img").src = element.urlToImage;
@@ -84,7 +85,7 @@ async function fetchingData(event){
         }
         let response = await data.json();
         // console.log(response);
-        // let arr = response.articles;
+        let arr = response.articles;
         // console.log(arr);
         // console.log(typeof arr);
         CreateNewCard(arr);

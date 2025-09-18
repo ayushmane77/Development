@@ -5,7 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let arr = [3,4,25,2];
+        let arr = [3,4,25,2,5,3,2,7];
+        console.log(arr.includes(49));
+
+        // let filterArray  = arr.filter((val)=>{
+        //     if(filterArray.includes(val)){
+        //         return val;
+        //     }
+        // });
+        // console.log(filterArray);
+        let obj = {};
+        for(let e of arr){
+            obj[e] = (obj[e] || 0) + 1;
+        }
+        console.log(obj);
+        
+
+        console.log(arr.findIndex((val)=>val===2)); // it will return the index of first occurence of the element
+        // console.log(arr.findIndex(7)); // return an error
+        
+        // let filterArray = [];
+        // for(let i=0;i<arr.length;i++){
+        //     if(arr.lastIndexOf(77))
+        // }
+        
         
         // console.log(newArr);
         let newA = arr.map((val)=>{
