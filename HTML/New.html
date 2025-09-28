@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  class="msg"></div>
+    <div class="msg"></div>
+
+    <input type="text" placeholder="enter text" id="inp">
+    <p id="para"></p>
+    <script>
+        let a = document.getElementsByClassName("msg");
+        a[0].innerHTML = new Date();
+        a[1].innerHTML = "Hello world"
+
+        a[0].style.color = "red";
+
+        let input = document.getElementById("inp");
+        let para = document.getElementById("para");
+        input.addEventListener("keyup",(e)=>{
+            para.innerHTML = e.target.value.toUpperCase();
+        })
+    </script>
+</body>
+</html>
