@@ -40,7 +40,7 @@ function App() {
           ...prev,
           price:5000000,
         }))
-      }}>click me</button>
+      }}>click me for changing price</button>
     </>
   )
 }
