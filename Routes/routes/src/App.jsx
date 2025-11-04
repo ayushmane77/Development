@@ -8,6 +8,8 @@ import './App.css'
 import Avatar from './components/Avatar';
 import OldBook from './components/OldBook';
 import NewBook from './components/NewBook';
+import Login from './components/Login';
+import DashBoard from './components/DashBoard';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +33,10 @@ function App() {
           <Route path="oldbook" element={<OldBook/>}/>
           <Route path="newbook" element={<NewBook/>}/>
         </Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/dashboard' element={<DashBoard/>}></Route>
+
+        
         
         
       </Routes>
