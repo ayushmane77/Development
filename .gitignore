@@ -7,6 +7,8 @@ Thumbs.db
 
 # Ignore dependencies (if you use Node.js etc.)
 node_modules/
+.gitignore
+README.md
 
 # Ignore temporary files
 *.log
